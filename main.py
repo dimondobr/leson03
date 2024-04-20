@@ -23,7 +23,7 @@ color = "light green"
 font = pygame.font.Font(None, 36)
 clock = pygame.time.Clock()
 
-wait_time = 500  # Время ожидания в миллисекундах (0.5 секунд)
+wait_time = 1000  # Время ожидания в миллисекундах (0.5 секунд)
 start_time = pygame.time.get_ticks()
 
 
@@ -36,10 +36,7 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-        if elapsed_time >= wait_time:
-            target_x = random.randint(0, SCREEN_WIDTH - target_width)
-            target_y = random.randint(0, SCREEN_HEIGHT - target_height)
-        elif event.type == pygame.MOUSEBUTTONDOWN :
+        if event.type == pygame.MOUSEBUTTONDOWN :
             mouse_x, mouse_y = pygame.mouse.get_pos()
             if target_x < mouse_x < target_x + target_width and target_y < mouse_y < target_y + target_height:
                 target_x = random.randint(0, SCREEN_WIDTH - target_width)
@@ -49,9 +46,7 @@ while running:
                time.sleep(0.5)
                target_x = random.randint(0, SCREEN_WIDTH - target_width)
                target_y = random.randint(0, SCREEN_HEIGHT - target_height)
-        elif  elapsed_time >= wait_time:
-            target_x = random.randint(0, SCREEN_WIDTH - target_width)
-            target_y = random.randint(0, SCREEN_HEIGHT - target_height)
+
     text_x = font.render(f'попал: {x}', True, (0, 0, 0))
     screen.blit(text_x, (50, 50))
 
