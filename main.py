@@ -3,10 +3,11 @@ import time
 import random
 pygame.init()
 
-
+SCREEN_WIDTH = 1000
+SCREEN_HEIGHT = 800
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
-pygame.display.set_caption("игра Тир")
+pygame.display.set_caption("hghjfljflhf")
 icon = pygame.image.load("img/klipartz.com.png")
 pygame.display.set_icon(icon)
 
