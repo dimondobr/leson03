@@ -1,8 +1,3 @@
-import pygame
-import time
-import random
-pygame.init()
-
 n"
 font = pygame.font.Font(None, 36)
 clock = pygame.time.Clock()
